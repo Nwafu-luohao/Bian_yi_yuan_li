@@ -1,0 +1,10 @@
+int main()
+{
+    int c,d;
+	while(a<b)
+	{
+		c=c+a;
+	}
+	
+	return 0;
+}

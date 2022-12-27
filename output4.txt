@@ -1,0 +1,87 @@
+词法分析:
+15 --- int
+17 --- main
+72 --- (
+73 --- )
+75 --- {
+15 --- int
+84 --- c
+70 --- ,
+84 --- d
+69 --- ;
+21 --- while
+72 --- (
+84 --- a
+65 --- <
+84 --- b
+73 --- )
+75 --- {
+84 --- c
+78 --- =
+84 --- c
+87 --- +
+84 --- a
+69 --- ;
+74 --- }
+48 --- return
+7 --- 0
+69 --- ;
+74 --- }
+
+语法分析:
+Start
+--Program
+----Type
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------StatementSentence
+------------Type
+------------Identifier
+------------Identifier
+----SentenceBlock
+------Sentence
+--------LoopSentence
+----------Condition
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Identifier
+------------Rop
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Identifier
+----------SentenceBlock
+------------SentenceBlock
+--------------Sentence
+----------------SequenceSentence
+------------------AssignmentSentence
+--------------------Identifier
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------ReturnSentence
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Integer
+Thank you.
+
+语义分析: 
+1:	(j<,	a,	b,	3)
+2:	(j,	_,	_,	6)
+3:	(+,	c,	a,	T1)
+4:	(=,	T1,	_,	c)
+5:	(j,	_,	_,	1)

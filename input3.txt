@@ -1,0 +1,14 @@
+int main()
+{
+	int a,b,c,d;
+	if(a<b)
+	{
+		c=d-1;
+	}
+	else
+	{
+		b=a+c;
+	}
+	
+	return 0;
+}

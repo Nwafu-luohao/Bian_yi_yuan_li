@@ -1,0 +1,306 @@
+词法分析:
+15 --- int
+17 --- main
+72 --- (
+73 --- )
+75 --- {
+15 --- int
+84 --- a
+70 --- ,
+84 --- b
+69 --- ;
+84 --- a
+78 --- =
+7 --- 1
+69 --- ;
+24 --- switch
+72 --- (
+84 --- a
+73 --- )
+75 --- {
+29 --- case
+7 --- 1
+71 --- :
+75 --- {
+19 --- if
+72 --- (
+84 --- a
+65 --- <
+84 --- b
+73 --- )
+75 --- {
+84 --- b
+78 --- =
+84 --- v
+69 --- ;
+84 --- d
+78 --- =
+84 --- c
+69 --- ;
+74 --- }
+20 --- else
+75 --- {
+84 --- b
+78 --- =
+84 --- b
+87 --- +
+84 --- c
+69 --- ;
+74 --- }
+74 --- }
+53 --- break
+69 --- ;
+29 --- case
+7 --- 2
+71 --- :
+84 --- b
+78 --- =
+7 --- 2
+69 --- ;
+53 --- break
+69 --- ;
+29 --- case
+7 --- 3
+71 --- :
+84 --- b
+78 --- =
+7 --- 3
+69 --- ;
+53 --- break
+69 --- ;
+29 --- case
+7 --- 4
+71 --- :
+84 --- b
+78 --- =
+7 --- 4
+69 --- ;
+53 --- break
+69 --- ;
+29 --- case
+7 --- 5
+71 --- :
+84 --- b
+78 --- =
+7 --- 5
+69 --- ;
+53 --- break
+69 --- ;
+29 --- case
+7 --- 6
+71 --- :
+84 --- b
+78 --- =
+7 --- 6
+69 --- ;
+53 --- break
+69 --- ;
+29 --- case
+7 --- 7
+71 --- :
+84 --- b
+78 --- =
+7 --- 7
+69 --- ;
+53 --- break
+69 --- ;
+23 --- default
+71 --- :
+84 --- b
+78 --- =
+7 --- 0
+69 --- ;
+53 --- break
+69 --- ;
+74 --- }
+48 --- return
+7 --- 0
+69 --- ;
+74 --- }
+
+语法分析:
+Start
+--Program
+----Type
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------StatementSentence
+------------Type
+------------Identifier
+------------Identifier
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------AssignmentSentence
+------------Identifier
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Integer
+----SentenceBlock
+------Sentence
+--------SwitchSentence
+----------SentenceBlock
+------------SentenceBlock
+--------------Sentence
+----------------ConditionSentence
+------------------Condition
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+--------------------Rop
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+------------------SentenceBlock
+--------------------SentenceBlock
+----------------------Sentence
+------------------------SequenceSentence
+--------------------------AssignmentSentence
+----------------------------Identifier
+----------------------------Expression
+------------------------------AdditiveExpression
+--------------------------------MultiplicativeExpression
+----------------------------------UnaryExpression
+------------------------------------Identifier
+--------------------SentenceBlock
+----------------------Sentence
+------------------------SequenceSentence
+--------------------------AssignmentSentence
+----------------------------Identifier
+----------------------------Expression
+------------------------------AdditiveExpression
+--------------------------------MultiplicativeExpression
+----------------------------------UnaryExpression
+------------------------------------Identifier
+------------------SentenceBlock
+--------------------SentenceBlock
+----------------------Sentence
+------------------------SequenceSentence
+--------------------------AssignmentSentence
+----------------------------Identifier
+----------------------------Expression
+------------------------------AdditiveExpression
+--------------------------------MultiplicativeExpression
+----------------------------------UnaryExpression
+------------------------------------Identifier
+--------------------------------MultiplicativeExpression
+----------------------------------UnaryExpression
+------------------------------------Identifier
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----------SentenceBlock
+------------Sentence
+--------------SequenceSentence
+----------------AssignmentSentence
+------------------Identifier
+------------------Expression
+--------------------AdditiveExpression
+----------------------MultiplicativeExpression
+------------------------UnaryExpression
+--------------------------Integer
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------ReturnSentence
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Integer
+Thank you.
+
+语义分析: 
+1:	(=,	1,	_,	a)
+2:	(case,	a,	1,	4)
+3:	(J,	_,	_,	11)
+4:	(j<,	a,	b,	6)
+5:	(j,	_,	_,	9)
+6:	(=,	v,	_,	b)
+7:	(=,	c,	_,	d)
+8:	(j,	_,	_,	11)
+9:	(+,	b,	c,	T1)
+10:	(=,	T1,	_,	b)
+11:	(case,	a,	2,	13)
+12:	(J,	_,	_,	14)
+13:	(=,	2,	_,	b)
+14:	(case,	a,	3,	16)
+15:	(J,	_,	_,	17)
+16:	(=,	3,	_,	b)
+17:	(case,	a,	4,	19)
+18:	(J,	_,	_,	20)
+19:	(=,	4,	_,	b)
+20:	(case,	a,	5,	22)
+21:	(J,	_,	_,	23)
+22:	(=,	5,	_,	b)
+23:	(case,	a,	6,	25)
+24:	(J,	_,	_,	26)
+25:	(=,	6,	_,	b)
+26:	(case,	a,	7,	28)
+27:	(J,	_,	_,	29)
+28:	(=,	7,	_,	b)
+29:	(=,	0,	_,	b)

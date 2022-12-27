@@ -1,0 +1,142 @@
+词法分析:
+15 --- int
+17 --- main
+72 --- (
+73 --- )
+75 --- {
+15 --- int
+84 --- c
+70 --- ,
+84 --- d
+69 --- ;
+25 --- do
+75 --- {
+84 --- c
+78 --- =
+84 --- c
+87 --- +
+84 --- a
+69 --- ;
+21 --- while
+72 --- (
+84 --- a
+65 --- <
+84 --- b
+73 --- )
+75 --- {
+84 --- c
+78 --- =
+84 --- d
+69 --- ;
+74 --- }
+74 --- }
+21 --- while
+72 --- (
+84 --- a
+65 --- <
+84 --- b
+73 --- )
+69 --- ;
+15 --- int
+84 --- c
+70 --- ,
+84 --- d
+69 --- ;
+48 --- return
+7 --- 0
+69 --- ;
+74 --- }
+
+语法分析:
+Start
+--Program
+----Type
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------StatementSentence
+------------Type
+------------Identifier
+------------Identifier
+----SentenceBlock
+------Sentence
+--------DoWhile
+----------SentenceBlock
+------------SentenceBlock
+--------------Sentence
+----------------SequenceSentence
+------------------AssignmentSentence
+--------------------Identifier
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+------------SentenceBlock
+--------------Sentence
+----------------LoopSentence
+------------------Condition
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+--------------------Rop
+--------------------Expression
+----------------------AdditiveExpression
+------------------------MultiplicativeExpression
+--------------------------UnaryExpression
+----------------------------Identifier
+------------------SentenceBlock
+--------------------SentenceBlock
+----------------------Sentence
+------------------------SequenceSentence
+--------------------------AssignmentSentence
+----------------------------Identifier
+----------------------------Expression
+------------------------------AdditiveExpression
+--------------------------------MultiplicativeExpression
+----------------------------------UnaryExpression
+------------------------------------Identifier
+----------Booler
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Identifier
+------------Rop
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Identifier
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------StatementSentence
+------------Type
+------------Identifier
+------------Identifier
+----SentenceBlock
+------Sentence
+--------SequenceSentence
+----------ReturnSentence
+------------Expression
+--------------AdditiveExpression
+----------------MultiplicativeExpression
+------------------UnaryExpression
+--------------------Integer
+Thank you.
+
+语义分析: 
+1:	(+,	c,	a,	T1)
+2:	(=,	T1,	_,	c)
+3:	(j<,	a,	b,	5)
+4:	(j,	_,	_,	7)
+5:	(=,	d,	_,	c)
+6:	(j,	_,	_,	3)
+7:	(J<,	a,	b,	9)
+8:	(J,	_,	_,	9)
